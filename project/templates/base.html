@@ -1,0 +1,95 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js ie6 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page_title }}{% if page_title %} :: {% endif %}Project Title</title>
+  <meta name="description" content="{% block meta_description %}{% endblock %}">
+  <meta name="author" content="Colby Palmer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico"/>
+  <link href="{{ STATIC_URL }}style/project.css" rel="stylesheet"/>
+  <!--[if lt IE 9]>
+    <script src="{{ STATIC_URL }}bower/html5shiv/src/html5shiv.js"></script>
+  <![endif]-->
+  {% block extra_stylesheets %}{% endblock %}
+  {% block extra_head %}{% endblock %}
+  <script src="{{ STATIC_URL }}bower/modernizr/modernizr.js"></script>
+</head>
+
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+  <div class="body__container">
+    <header class="header--main">
+      <nav class="nav--main">
+        <a href="" class="nav__a{% if '/path_name/' in request.path %} nav__a--active{% endif %}">Nav Item</a>
+      </nav>
+
+      <a href="/" class="logo--main">
+        <h1 class="header__heading"><span class="header__title">Project Title Goes Here</span> <span class="header__subtitle">Page subtitle goes here</span></h1>
+      </a>
+    </header>
+
+    <main class="content--main" role="main">
+      {% block site_main %}{% endblock %}
+    </main>
+  </div>
+
+  <footer class="footer--main">
+    <div class="footer__container">
+      <p class="footer__copyright">&copy; 2014 Colby Palmer. <span>All rights reserved.</span></p>
+    </div>
+  </footer>
+
+{% block extra_body %}{% endblock %}
+<script src="{{ STATIC_URL }}script/project.js"></script>
+{% block extra_scripts %}{% endblock %}
+
+{% if not settings.DEBUG %}
+  <!-- Google analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'xxxxx']);
+    _gaq.push(['_setDomainName', 'project.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+{% endif %}
+
+
+<script type="text/javascript">
+
+
+  {% block extra_javascript %}{% endblock %}
+  $(document).ready(function () {
+
+    {% block extra_jquery %}
+    {% endblock %}
+  });
+</script>
+
+{% if debug %}
+  {# browser sync scripts #}
+  <script src='//192.168.1.102:3000/socket.io/socket.io.js'></script>
+  <script>var ___socket___ = io.connect('http://192.168.1.102:3000');</script>
+  <script src='//192.168.1.102:3001/client/browser-sync-client.0.8.2.js'></script>
+{% endif %}
+
+</body>
+</html>

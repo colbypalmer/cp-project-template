@@ -1,0 +1,9 @@
+.idea/
+*.pyc
+local_settings.py
+*.DS_Store
+/.sass-cache/*
+/project/static/bower/
+/node_modules/*
+
+/project/project/media/

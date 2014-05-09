@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "version": "0.01a",
+  "description": "project.com",
+  "author": "Colby Palmer <colby@colbypalmer.com>",
+  "contributors": [
+    {
+      "name": "Colby Palmer",
+      "email": "colby@colbypalmer.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colbypalmer/project.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "grunt": "0.4.4",
+    "grunt-contrib-watch": "0.6.0",
+    "grunt-browser-sync": "~0.8.2",
+    "grunt-contrib-sass": "0.7.3",
+    "grunt-contrib-jshint": "0.9.2",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-contrib-uglify": "0.3.0",
+    "matchdep": "0.3.0"
+  }
+}
