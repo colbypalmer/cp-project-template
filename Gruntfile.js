@@ -11,11 +11,11 @@ module.exports = function (grunt) {
 
     watch: {
       css: {
-        files: ['project/static/style/**/*.scss', 'project/static/bower/**/*.scss'],
+        files: ['<%= pkg.name %>/static/style/**/*.scss', '<%= pkg.name %>/static/bower/**/*.scss'],
         tasks: ['sass:colbystyle']
       },
       script: {
-        files: ['project/static/script/site.js'],
+        files: ['<%= pkg.name %>/static/script/site.js'],
         tasks: ['buildjs']
       }
     },
@@ -24,10 +24,10 @@ module.exports = function (grunt) {
     sass: {
       colbystyle: {
         files: {
-          'project/static/style/project.css': 'project/static/style/project.scss'
+          '<%= pkg.name %>/static/style/<%= pkg.name %>.css': '<%= pkg.name %>/static/style/<%= pkg.name %>.scss'
         },
         options: {
-          banner: '/* This is Colby style, Mofo! */',
+          banner: '/* Stylesheet for <%= pkg.name %> */',
           style: 'compressed',
           quiet: true
         }
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
 
     // Hint JS
     jshint: {
-      all: ['project/static/script/site.js']
+      all: ['<%= pkg.name %>/static/script/site.js']
     },
 
     // Concat JS
@@ -48,10 +48,10 @@ module.exports = function (grunt) {
           banner: '/*! DEVELOPMENT VERSION */ \n'
         },
         src: [
-          'project/static/bower/jquery/dist/jquery.js',
-          'project/static/script/site.js'
+          '<%= pkg.name %>/static/bower/jquery/dist/jquery.js',
+          '<%= pkg.name %>/static/script/site.js'
         ],
-        dest: 'project/static/script/<%= pkg.name %>.js'
+        dest: '<%= pkg.name %>/static/script/<%= pkg.name %>.js'
       }
     },
 
@@ -63,8 +63,8 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'project/static/script/<%= pkg.name %>.js': ['<%= concat.dist.dest %>'],
-          'project/static/script/packery.min.js': ['project/static/bower/packery/js/packery.js']
+          '<%= pkg.name %>/static/script/<%= pkg.name %>.js': ['<%= concat.dist.dest %>'],
+          '<%= pkg.name %>/static/script/packery.min.js': ['<%= pkg.name %>/static/bower/packery/js/packery.js']
         }
       }
     },
@@ -75,8 +75,8 @@ module.exports = function (grunt) {
       dev: {
         files: {
           src: [
-            'project/static/style/*.css',
-            'project/templates/**/*.html'
+            '<%= pkg.name %>/static/style/*.css',
+            '<%= pkg.name %>/templates/**/*.html'
           ]
         },
         options: {
