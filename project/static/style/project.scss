@@ -263,53 +263,6 @@ body {
   }
 }
 
-.errorlist {
-  @include flash($error-color);
-}
-
-
-/* -------------    FORMS     -----------------*/
-
-label {
-  display: block;
-}
-
-input::-webkit-input-placeholder {
-  font-style: italic !important;
-  color: #8d8c8c !important;
-}
-
-input:-moz-placeholder {
-  font-style: italic !important;
-  color: #8d8c8c !important;
-}
-
-.errorlist {
-  margin-left: 0 !important;
-  height: 1.5em !important;
-  clear: both !important;
-}
-
-.errorlist li {
-  background: #FFD6D6;
-  background: -webkit-gradient(linear, left center, right center, color-stop(0.00, #FFD6D6), color-stop(0.80, #fff));
-  background: -moz-linear-gradient(left, #FFD6D6 0.00%, #fff 80.00%);
-  color: #aa0000;
-  border-left: 4px solid #aa0000;
-  font-style: italic;
-  padding: 0 8px !important;
-  margin: 0 0 -6px 8px !important;
-  width: 75% !important;
-  display: block;
-  white-space: none;
-  clear: left !important;
-}
-
-li.form_error_li input, li.form_error_li textarea {
-  background: #FFD6D6;
-  border: 1px solid #c00 !important;
-}
-
 
 /* -------------    UTILITY     -----------------*/
 
