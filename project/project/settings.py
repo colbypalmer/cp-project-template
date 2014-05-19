@@ -110,7 +110,6 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.comments',
     'project',
-    'tagging',
     'django_extensions',
     'south',
 )
