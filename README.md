@@ -10,3 +10,12 @@ This basic project template includes:
 6. Grunt and Bower
 
 Version: 0.01a
+
+Quick start
+-----------
+
+1. Create a virtualenv for this project: `mkvirtualenv project_name`
+
+2. Install requirements: `pip install -r requirements.txt`
+
+3. Create a database and local_settings.py based on the included local_settings_example.py
