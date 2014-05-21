@@ -69,10 +69,8 @@ $large-width: em(1140);
 /* -------------    HEADER AND NAV     -----------------*/
 
 .header--main {
-  height: 110px;
-  margin-bottom: 104px;
-  border-top: 1px solid #fff !important;
-  border-bottom: 1px solid #fff !important;
+  height: 85px;
+  margin-bottom: 85px;
   overflow: visible;
 
   @include breakpoint(small){
@@ -90,7 +88,6 @@ $large-width: em(1140);
   position: relative;
   overflow: visible;
   text-align: center;
-  text-shadow: #000 -1px 2px 12px;
 
   @include breakpoint(small){
     text-align: left;
@@ -109,7 +106,7 @@ $large-width: em(1140);
 .header__heading {
   height: 0;
   text-align: center;
-  padding-bottom: 110px;
+  padding-bottom: 85px;
   font-size: 2.25em;
   overflow: visible;
   display: inline-block;
@@ -134,14 +131,12 @@ $large-width: em(1140);
 
   @include breakpoint(small){
     position: relative;
-    left: -30px;
   }
 }
 
 .nav--main {
   margin: 0px auto 0px -161px;
-  height: 110px;
-  width: 310px;
+  width: 85px;
   position: absolute;
   top: 111px;
   left: 50%;

@@ -3,8 +3,8 @@
 $sans-serif: $helvetica;
 $serif: "Libre Baskerville", $georgia;
 
-$base-font-family: "roboto-light", $sans-serif;
-$header-font-family: "Oswald", $sans-serif;
+$base-font-family: $sans-serif;
+$header-font-family: $sans-serif;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
@@ -20,16 +20,6 @@ $dark-blue: #06316c;
 $light-blue: #4782d3;
 $lighter-blue: #6c97d3;
 $flat-blue: #2a4d7d;
-$orange: #fca008;
-$light-orange: #feb845;
-$lightest-orange: #fecb76;
-$dark-orange: #A46702;
-$flat-orange: #BD8A34;
-$teal: #05A37F;
-$light-teal: #39D1AF;
-$lighter-teal: #61D1B8;
-$dark-teal: #026A52;
-$flat-teal: #217A66;
 $yellow: #FCC908;
 $dark-gray: #333;
 $medium-gray: #999;
@@ -37,13 +27,6 @@ $light-gray: #d9d8f5;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
-$dark-purple-old: #3b1c8c;
-$purple: #301BAF;
-$dark-purple: #170972;
-$light-purple: #624FD7;
-$lighter-purple: #8173D7;
-$lightest-purple: #d2d2f0;
-$flat-purple: #3C3083;
 
 // Highlight color
 $highlight: #cdddf9;
