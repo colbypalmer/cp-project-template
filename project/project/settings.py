@@ -1,4 +1,4 @@
-"""Django settings for the colbypalmer.com project."""
+"""Django settings for this very special project."""
 import os
 import sys
 import logging
