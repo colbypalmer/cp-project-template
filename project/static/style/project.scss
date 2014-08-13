@@ -246,3 +246,42 @@ body {
 .hidden {
   @include visually_hidden;
 }
+
+
+/* -------------    MODALS     -----------------*/
+
+.mfp-bg {
+  opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+.mfp-figure:after {
+  background: #000;
+  opacity: 1;
+}
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0;
+}
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0;
+}
+
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0;
+}
+
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 1.5em 2em;
+  width: 70%;
+}
