@@ -37,3 +37,8 @@ Quick start
 
 11. In another Terminal, cd to your project directory/< YOUR PROJECT NAME >/ and enter `python maanage.py runserver`.
 
+
+Settings
+-----------
+
+GOOGLE_ACCOUNT_CODE = add your GA code to activate tracking. (Only when DEBUG=False)

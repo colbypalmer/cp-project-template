@@ -56,7 +56,7 @@
 <script src="{{ STATIC_URL }}script/project.js"></script>
 {% block extra_scripts %}{% endblock %}
 
-{% if not settings.DEBUG %}
+{% if not settings.DEBUG and settings.GOOGLE_ACCOUNT_CODE %}
   <!-- Google analytics -->
   <script type="text/javascript">
 
