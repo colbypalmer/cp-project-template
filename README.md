@@ -42,3 +42,4 @@ Settings
 -----------
 
 GOOGLE_ACCOUNT_CODE = add your GA code to activate tracking. (Only when DEBUG=False)
+GOOGLE_ACCOUNT_DOMAIN = add your GA domain for tracking.
