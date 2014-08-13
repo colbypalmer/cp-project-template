@@ -110,27 +110,10 @@ $large-width: em(1140);
   font-size: 2.25em;
   overflow: visible;
   display: inline-block;
-
-  span {
-    @include stack;
-  }
-}
-
-.header__title {
-
 }
 
 .header__subtitle {
-  margin-top: -1.2em;
-  font-size: 19px;
-  text-indent: 0.45em;
-}
-
-.logo--main {
-
-  @include breakpoint(small){
-    position: relative;
-  }
+  font-size: 0.5em;
 }
 
 .nav--main {

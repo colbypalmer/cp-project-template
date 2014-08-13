@@ -33,7 +33,7 @@
 
 
       <h1 class="header__heading">
-        <a href="/" class="logo--main">
+        <a href="/" class="header__a">
           <span class="header__title">Project Title Goes Here</span>
           <span class="header__subtitle">Page subtitle goes here</span>
         </a>
@@ -56,7 +56,7 @@
 <script src="{{ STATIC_URL }}script/project.js"></script>
 {% block extra_scripts %}{% endblock %}
 
-{% if not settings.DEBUG and settings.GOOGLE_ACCOUNT_CODE %}
+{% if settings.GOOGLE_ACCOUNT_CODE and not settings.DEBUG %}
   <!-- Google analytics -->
   <script type="text/javascript">
 
