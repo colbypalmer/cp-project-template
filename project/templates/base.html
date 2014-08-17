@@ -14,6 +14,17 @@
   <meta name="description" content="{% block meta_description %}{% endblock %}">
   <meta name="author" content="Colby Palmer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  {% block og_tags %}
+    <meta property="og:title" content="{% block og_title %}DEFAULT TITLE HERE{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}DEFAULT DESCRIPTION HERE{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:image" content="http://{{ request.get_host }}{% block og_img %}{{ STATIC_URL }}img/logo_main.png{% endblock %}">
+    <meta property="og:url" content="{% block fb_og_url %}http://{{ request.get_host }}{{ request.get_full_path }}{% endblock %}">
+    <meta property="og:site_name" content="SITE NAME HERE">
+    {% block extra_og_tags %}{% endblock %}
+  {% endblock og_tags %}
+
   <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico"/>
   <link href="{{ STATIC_URL }}style/project.css" rel="stylesheet"/>
   <!--[if lt IE 9]>
