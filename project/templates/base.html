@@ -7,7 +7,7 @@
 <html class="no-js ie8 ie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<head prefix="{% block head_prefix %}og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#{% endblock %}">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{ page_title }}{% if page_title %} :: {% endif %}Project Title</title>
@@ -20,10 +20,11 @@
     <meta property="og:description" content="{% block og_description %}DEFAULT DESCRIPTION HERE{% endblock %}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
     <meta property="og:image" content="http://{{ request.get_host }}{% block og_img %}{{ STATIC_URL }}img/logo_main.png{% endblock %}">
-    <meta property="og:url" content="{% block fb_og_url %}http://{{ request.get_host }}{{ request.get_full_path }}{% endblock %}">
-    <meta property="og:site_name" content="SITE NAME HERE">
     {% block extra_og_tags %}{% endblock %}
   {% endblock og_tags %}
+  <meta property="og:url" content="{% block fb_og_url %}http://{{ request.get_host }}{{ request.get_full_path }}{% endblock %}">
+  <meta property="og:site_name" content="SITE NAME HERE">
+  <meta property="fb:admins" content="FACEBOOK ID HERE" />
 
   <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico"/>
   <link href="{{ STATIC_URL }}style/project.css" rel="stylesheet"/>
