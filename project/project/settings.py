@@ -110,9 +110,14 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.comments',
     'project',
-    'django_extensions',
     'south',
 )
+if DEBUG:
+    DEBUG_APPS = (
+        'django_extensions',
+        'debug_toolbar',
+    )
+    INSTALLED_APPS = INSTALLED_APPS + DEBUG_APPS
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
