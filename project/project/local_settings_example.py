@@ -17,3 +17,5 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+GOOGLE_ACCOUNT_CODE = "UA-XXXXXXX-XX"
