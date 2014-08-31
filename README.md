@@ -6,7 +6,7 @@ This basic project template includes:
 2. South
 3. DirectTemplateView utility
 4. django-thumbs utility
-5. Bourbon, Neat and Bitters
+5. Bourbon and Bitters
 6. Jeet grid system
 7. Grunt and Bower setup
 
