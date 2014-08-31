@@ -51,7 +51,7 @@ module.exports = function (grunt) {
           '<%= pkg.name %>/static/bower/jquery/dist/jquery.js',
           '<%= pkg.name %>/static/script/site.js'
         ],
-        dest: '<%= pkg.name %>/static/script/<%= pkg.name %>.js'
+        dest: '<%= pkg.name %>/static/script/site-compiled.js'
       }
     },
 
