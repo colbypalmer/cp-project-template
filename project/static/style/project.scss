@@ -76,31 +76,6 @@ $large-width: em(1140);
   @include breakpoint(small){
     margin-bottom: 20px;
   }
-  @include breakpoint(medium){
-    margin-bottom: 20px;
-  }
-}
-
-.header__container {
-  @include container;
-  @include side_gutters;
-  margin-bottom: 1.5em;
-  position: relative;
-  overflow: visible;
-  text-align: center;
-
-  @include breakpoint(small){
-    text-align: left;
-  }
-
-  a:link, a:visited {
-    color: #c0c0de;
-  }
-
-  a:focus, a:hover, a:active {
-    color: white;
-  }
-
 }
 
 .header__heading {
