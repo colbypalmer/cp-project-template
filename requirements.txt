@@ -4,3 +4,4 @@ psycpog2==2.5.4
 Pillow==2.5.3
 Werkzeug==0.9.6
 South==1.0
+django-debug-toolbar==1.2.1
