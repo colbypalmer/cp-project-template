@@ -17,7 +17,7 @@ Quick start
 
 1. Clone the project or download from GitHub and open.
 
-2. Optional: Rename 'project' in directory names, file names and settings strings with the name of your project. (don't forget .bowerrc)
+2. Optional: Rename 'project' in directory names, file names and settings strings with the name of your project. (Don't forget `project/static/bower.json`.)
 
 3. Create a virtualenv for this project: `mkvirtualenv project_name`
 
