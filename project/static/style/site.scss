@@ -60,6 +60,12 @@ $large-width: em(1140);
   width: 1px;
 }
 
+@mixin text_hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 
 /* -------------    ANIMATIONS     -----------------*/
 
