@@ -107,7 +107,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
-    'django.contrib.comments',
     'project',
     'south',
 )
@@ -117,6 +116,8 @@ if DEBUG:
         'debug_toolbar',
     )
     INSTALLED_APPS = INSTALLED_APPS + DEBUG_APPS
+
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
