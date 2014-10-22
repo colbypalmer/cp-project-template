@@ -24,7 +24,7 @@ module.exports = function (grunt) {
     sass: {
       colbystyle: {
         files: {
-          '<%= pkg.name %>/static/style/<%= pkg.name %>.css': '<%= pkg.name %>/static/style/<%= pkg.name %>.scss'
+          '<%= pkg.name %>/static/style/site.css': '<%= pkg.name %>/static/style/site.scss'
         },
         options: {
           banner: '/* Stylesheet for <%= pkg.name %> */',
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= pkg.name %>/static/script/<%= pkg.name %>.js': ['<%= concat.dist.dest %>'],
+          '<%= pkg.name %>/static/script/<%= pkg.name %>.js': ['<%= concat.dist.dest %>']
         }
       }
     },
