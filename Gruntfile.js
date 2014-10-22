@@ -93,6 +93,9 @@ module.exports = function (grunt) {
   });
 
   // Tasks
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browser-sync');
+
   grunt.registerTask('default', ['browserSync', 'watch']);
   grunt.registerTask('buildcss', ['sass']);
   grunt.registerTask('buildjs', ['jshint', 'concat', 'uglify']);
