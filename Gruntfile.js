@@ -1,4 +1,4 @@
-// Colby Palmer's Site
+// My Site Template
 // ===
 
 module.exports = function (grunt) {
@@ -58,14 +58,14 @@ module.exports = function (grunt) {
     // Uglify JS
     uglify: {
       options: {
-        banner: '/*! Colby Palmer\'s Javascript v<%= pkg.version %> on ' +
+        banner: '/*! Compiled Site Javascript v<%= pkg.version %> on ' +
             '<%= grunt.template.today("yyyy-mm-dd") %> */ \n'
       },
       dist: {
         files: {
-          '<%= pkg.name %>/static/script/<%= pkg.name %>.js': ['<%= concat.dist.dest %>'],
-          'colbypalmer/static/script/modernizr.min.js': ['colbypalmer/static/bower/modernizr/modernizr.js'],
-          'colbypalmer/static/script/html5shiv.min.js': ['colbypalmer/static/bower/html5shiv/dist/html5shiv.js']
+          '<%= pkg.name %>/static/script/site.min.js': ['<%= concat.dist.dest %>'],
+          '<%= pkg.name %>/static/script/libs/modernizr.min.js': ['<%= pkg.name %>/static/bower/modernizr/modernizr.js'],
+          '<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['<%= pkg.name %>/static/bower/html5shiv/dist/html5shiv.js']
         }
       }
     },
@@ -95,9 +95,6 @@ module.exports = function (grunt) {
   });
 
   // Tasks
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-browser-sync');
-
   grunt.registerTask('default', ['browserSync', 'watch']);
   grunt.registerTask('buildcss', ['sass']);
   grunt.registerTask('buildjs', ['jshint', 'concat', 'uglify']);

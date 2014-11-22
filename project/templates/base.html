@@ -30,11 +30,11 @@
   <link rel="icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
   <link href="{{ STATIC_URL }}style/project.css" rel="stylesheet"/>
   <!--[if lt IE 9]>
-    <script src="{{ STATIC_URL }}script/html5shiv.min.js"></script>
+    <script src="{{ STATIC_URL }}script/libs/html5shiv.min.js"></script>
   <![endif]-->
   {% block extra_stylesheets %}{% endblock %}
   {% block extra_head %}{% endblock %}
-  <script src="{{ STATIC_URL }}script/modernizr.min.js"></script>
+  <script src="{{ STATIC_URL }}script/libs/modernizr.min.js"></script>
 </head>
 
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
@@ -66,7 +66,7 @@
   </footer>
 
 {% block extra_body %}{% endblock %}
-<script src="{{ STATIC_URL }}script/site-compiled.js"></script>
+<script src="{{ STATIC_URL }}script/site.min.js"></script>
 {% block extra_scripts %}{% endblock %}
 
 {% if settings.GOOGLE_ACCOUNT_CODE and not debug %}
