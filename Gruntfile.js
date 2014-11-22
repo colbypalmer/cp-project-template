@@ -63,7 +63,9 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= pkg.name %>/static/script/<%= pkg.name %>.js': ['<%= concat.dist.dest %>']
+          '<%= pkg.name %>/static/script/<%= pkg.name %>.js': ['<%= concat.dist.dest %>'],
+          'colbypalmer/static/script/modernizr.min.js': ['colbypalmer/static/bower/modernizr/modernizr.js'],
+          'colbypalmer/static/script/html5shiv.min.js': ['colbypalmer/static/bower/html5shiv/dist/html5shiv.js']
         }
       }
     },

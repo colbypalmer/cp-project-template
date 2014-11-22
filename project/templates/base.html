@@ -30,11 +30,11 @@
   <link rel="icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
   <link href="{{ STATIC_URL }}style/project.css" rel="stylesheet"/>
   <!--[if lt IE 9]>
-    <script src="{{ STATIC_URL }}bower/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="{{ STATIC_URL }}script/html5shiv.min.js"></script>
   <![endif]-->
   {% block extra_stylesheets %}{% endblock %}
   {% block extra_head %}{% endblock %}
-  <script src="{{ STATIC_URL }}bower/modernizr/modernizr.js"></script>
+  <script src="{{ STATIC_URL }}script/modernizr.min.js"></script>
 </head>
 
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
@@ -95,9 +95,9 @@
 
 {% if debug %}
   {# browser sync scripts #}
-  <script src='//192.168.1.102:3000/socket.io/socket.io.js'></script>
-  <script>var ___socket___ = io.connect('http://192.168.1.102:3000');</script>
-  <script src='//192.168.1.102:3001/client/browser-sync-client.0.8.2.js'></script>
+  <script type='text/javascript' id="__bs_script__">//<![CDATA[
+      document.write("<script async src='//HOST:3001/browser-sync/browser-sync-client.1.6.5.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+  //]]></script>
 {% endif %}
 
 </body>
