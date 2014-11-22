@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         },
         src: [
           '<%= pkg.name %>/static/bower/jquery/dist/jquery.js',
-          '<%= pkg.name %>/static/script/site.js'
+          '<%= pkg.name %>/static/script/site.min.js'
         ],
         dest: '<%= pkg.name %>/static/script/site-compiled.js'
       }
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= pkg.name %>/static/script/site.min.js': ['<%= concat.dist.dest %>'],
+          '<%= pkg.name %>/static/script/site.min.js': ['<%= pkg.name %>/static/script/site.js'],
           '<%= pkg.name %>/static/script/libs/modernizr.min.js': ['<%= pkg.name %>/static/bower/modernizr/modernizr.js'],
           '<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['<%= pkg.name %>/static/bower/html5shiv/dist/html5shiv.js']
         }
@@ -97,7 +97,7 @@ module.exports = function (grunt) {
   // Tasks
   grunt.registerTask('default', ['browserSync', 'watch']);
   grunt.registerTask('buildcss', ['sass']);
-  grunt.registerTask('buildjs', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('buildjs', ['jshint', 'uglify', 'concat']);
   grunt.registerTask('guide', ['sass', 'styleguide']);
 
 };
