@@ -27,7 +27,6 @@ module.exports = function (grunt) {
           '<%= pkg.name %>/static/style/site.css': '<%= pkg.name %>/static/style/site.scss'
         },
         options: {
-          banner: '/* Stylesheet for <%= pkg.name %> */',
           style: 'compressed',
           quiet: true
         }
@@ -83,10 +82,7 @@ module.exports = function (grunt) {
         options: {
           debugInfo: true,
           watchTask: true,
-          proxy: {
-            host: 'localhost',
-            port: 8000
-          }
+          proxy: "127.0.0.1:8000"
         }
       }
 
