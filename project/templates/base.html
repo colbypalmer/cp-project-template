@@ -28,7 +28,7 @@
 
   <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
-  <link href="{{ STATIC_URL }}style/project.css" rel="stylesheet"/>
+  <link href="{{ STATIC_URL }}style/site.css" rel="stylesheet"/>
   <!--[if lt IE 9]>
     <script src="{{ STATIC_URL }}script/libs/html5shiv.min.js"></script>
   <![endif]-->
@@ -43,15 +43,12 @@
       <nav class="nav--main">
         <a href="" class="nav__a{% if '/path_name/' in request.path %} nav__a--active{% endif %}">Nav Item</a>
       </nav>
-
-
       <h1 class="header__heading">
         <a href="/" class="header__a">
           <span class="header__title">Project Title Goes Here</span>
           <span class="header__subtitle">Page subtitle goes here</span>
         </a>
       </h1>
-
     </header>
 
     <main class="content--main" role="main">
@@ -61,7 +58,7 @@
 
   <footer class="footer--main">
     <div class="footer__container">
-      <p class="footer__copyright">&copy; 2014 Colby Palmer. <span>All rights reserved.</span></p>
+      <p class="footer__copyright">&copy; 2015 Zaphod Beeblebrox. <span>All rights reserved.</span></p>
     </div>
   </footer>
 
@@ -92,13 +89,6 @@
     {% endblock %}
   });
 </script>
-
-{% if debug %}
-  {# browser sync scripts #}
-    <script type='text/javascript' id="__bs_script__">//<![CDATA[
-        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.2.4.js'><\/script>".replace("HOST", location.hostname));
-    //]]></script>
-{% endif %}
 
 </body>
 </html>
