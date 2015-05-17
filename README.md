@@ -25,7 +25,7 @@ Quick start
 
 5. Create a database and local_settings.py based on the included local_settings_example.py
 
-6. If necessary, install Grunt with `npm install grunt-cli`.
+6. If necessary, install Grunt with `npm install -g grunt-cli`.
 
 7. In your Terminal, navigate to the project folder and type `npm install grunt --save-dev`
 
