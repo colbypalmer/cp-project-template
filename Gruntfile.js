@@ -86,6 +86,15 @@ module.exports = function (grunt) {
         }
       }
 
+    },
+
+    // Copy files
+    copy: {
+      main: {
+        src: '<%= pkg.name %>/static/bower/jquery/dist/jquery.min.map',
+        dest: '<%= pkg.name %>/static/script/jquery.min.map'
+
+      }
     }
 
   });
