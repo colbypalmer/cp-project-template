@@ -19,22 +19,22 @@
     <meta property="og:title" content="{% block og_title %}DEFAULT TITLE HERE{% endblock %}">
     <meta property="og:description" content="{% block og_description %}DEFAULT DESCRIPTION HERE{% endblock %}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
-    <meta property="og:image" content="http://{{ request.get_host }}{% block og_img %}{{ STATIC_URL }}img/logo_main.png{% endblock %}">
+    <meta property="og:image" content="http://{{ request.get_host }}{% block og_img %}{% static 'img/logo_main.png' %}{% endblock %}">
     {% block extra_og_tags %}{% endblock %}
   {% endblock og_tags %}
   <meta property="og:url" content="{% block fb_og_url %}http://{{ request.get_host }}{{ request.get_full_path }}{% endblock %}">
   <meta property="og:site_name" content="SITE NAME HERE">
   <meta property="fb:admins" content="FACEBOOK ID HERE" />
 
-  <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
-  <link href="{{ STATIC_URL }}style/site.css" rel="stylesheet"/>
+  <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
+  <link rel="icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
+  <link href="{% static "style/site.css" %}" rel="stylesheet"/>
   <!--[if lt IE 9]>
-    <script src="{{ STATIC_URL }}script/libs/html5shiv.min.js"></script>
+    <script src="{% static "script/libs/html5shiv.min.js" %}"></script>
   <![endif]-->
   {% block extra_stylesheets %}{% endblock %}
   {% block extra_head %}{% endblock %}
-  <script src="{{ STATIC_URL }}script/libs/modernizr.min.js"></script>
+  <script src="{% static "script/libs/modernizr.min.js" %}"></script>
 </head>
 
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
@@ -63,7 +63,7 @@
   </footer>
 
 {% block extra_body %}{% endblock %}
-<script src="{{ STATIC_URL }}script/site.min.js"></script>
+<script src="{% static "script/site-compiled.js" %}"></script>
 {% block extra_scripts %}{% endblock %}
 
 {% if settings.GOOGLE_ACCOUNT_CODE and not debug %}
