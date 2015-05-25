@@ -10,7 +10,7 @@
 <head prefix="{% block head_prefix %}og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#{% endblock %}">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page_title }}{% if page_title %} :: {% endif %}Project Title</title>
+  <title>{% block page_title %}Project Title{% endblock %}</title>
   <meta name="description" content="{% block meta_description %}{% endblock %}">
   <meta name="author" content="Colby Palmer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -37,7 +37,7 @@
   <script src="{% static "script/libs/modernizr.min.js" %}"></script>
 </head>
 
-<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+<body id="{% block body_id %}{% endblock %}" class="body--{% block body_class %}{% endblock %}">
   <div class="body__container">
     <header class="header--main">
       <nav class="nav--main">
