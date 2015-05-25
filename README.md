@@ -10,7 +10,7 @@ This basic project template includes:
 6. Jeet grid system
 7. Grunt and Bower setup
 
-Version: 0.01a
+Version: 0.1.2
 
 Quick start
 -----------
