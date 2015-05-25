@@ -18,26 +18,18 @@ ALLOWED_HOSTS = []
 MANAGERS = ADMINS
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # URL prefix for static files.
-STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(os.path.dirname(__file__), 'static'),
 )
-
-## List of finder classes that know how to find static files in
-## various locations.
-#STATICFILES_FINDERS = (
-#    'django.contrib.staticfiles.finders.FileSystemFinder',
-#    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-##    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-#)
 
 INTERNAL_IPS = [
     "127.0.0.1",

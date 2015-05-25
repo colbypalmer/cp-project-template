@@ -11,11 +11,11 @@ module.exports = function (grunt) {
 
     watch: {
       css: {
-        files: ['<%= pkg.name %>/static/style/**/*.scss', '<%= pkg.name %>/static/bower/**/*.scss'],
+        files: ['<%= pkg.name %>/<%= pkg.name %>/static/style/**/*.scss', '<%= pkg.name %>/<%= pkg.name %>/static/bower/**/*.scss'],
         tasks: ['sass:colbystyle']
       },
       script: {
-        files: ['<%= pkg.name %>/static/script/site.js'],
+        files: ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js'],
         tasks: ['buildjs']
       }
     },
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
     sass: {
       colbystyle: {
         files: {
-          '<%= pkg.name %>/static/style/site.css': '<%= pkg.name %>/static/style/site.scss'
+          '<%= pkg.name %>/<%= pkg.name %>/static/style/site.css': '<%= pkg.name %>/<%= pkg.name %>/static/style/site.scss'
         },
         options: {
           style: 'compressed',
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 
     // Hint JS
     jshint: {
-      all: ['<%= pkg.name %>/static/script/site.js']
+      all: ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js']
     },
 
     // Concat JS
@@ -47,10 +47,10 @@ module.exports = function (grunt) {
           banner: '/*! DEVELOPMENT VERSION */ \n'
         },
         src: [
-          '<%= pkg.name %>/static/bower/jquery/dist/jquery.js',
-          '<%= pkg.name %>/static/script/site.min.js'
+          '<%= pkg.name %>/<%= pkg.name %>/static/bower/jquery/dist/jquery.js',
+          '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js'
         ],
-        dest: '<%= pkg.name %>/static/script/site-compiled.js'
+        dest: '<%= pkg.name %>/<%= pkg.name %>/static/script/site-compiled.js'
       }
     },
 
@@ -62,9 +62,9 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= pkg.name %>/static/script/site.min.js': ['<%= pkg.name %>/static/script/site.js'],
-          '<%= pkg.name %>/static/script/libs/modernizr.min.js': ['<%= pkg.name %>/static/bower/modernizr/modernizr.js'],
-          '<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['<%= pkg.name %>/static/bower/html5shiv/dist/html5shiv.js']
+          '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js'],
+          '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/modernizr.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/bower/modernizr/modernizr.js'],
+          '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/bower/html5shiv/dist/html5shiv.js']
         }
       }
     },
@@ -75,8 +75,8 @@ module.exports = function (grunt) {
       dev: {
         files: {
           src: [
-            '<%= pkg.name %>/static/style/*.css',
-            '<%= pkg.name %>/templates/**/*.html'
+            '<%= pkg.name %>/<%= pkg.name %>/static/style/*.css',
+            '<%= pkg.name %>/<%= pkg.name %>/templates/**/*.html'
           ]
         },
         options: {
@@ -91,8 +91,8 @@ module.exports = function (grunt) {
     // Copy files
     copy: {
       main: {
-        src: '<%= pkg.name %>/static/bower/jquery/dist/jquery.min.map',
-        dest: '<%= pkg.name %>/static/script/jquery.min.map'
+        src: '<%= pkg.name %>/<%= pkg.name %>/static/bower/jquery/dist/jquery.min.map',
+        dest: '<%= pkg.name %>/<%= pkg.name %>/static/script/jquery.min.map'
 
       }
     }
