@@ -1,0 +1,15 @@
+{% if form_show_errors %}
+    {% include "cp_forms/errors.html" %}
+{% endif %}
+{% if form_style == "" or form_style %}
+    <fieldset class="{{ form_style }}">
+    {% if legend %}<legend>{{ legend|safe }}</legend>{% endif %}
+{% endif %}
+        <ul class="form__ul">
+{% for field in form %}
+    {% include "cp_forms/field.html" %}
+{% endfor %}
+        </ul>
+{% if form_style == "" or form_style %}
+    </fieldset>
+{% endif %}

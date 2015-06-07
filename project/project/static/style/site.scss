@@ -2,38 +2,6 @@
 
 //@include edit();
 
-$max-width: em(1140);
-
-// # Widths
-$pocket-width: em(480);
-$small-width: em(768);
-$medium-width: em(980);
-$large-width: em(1140);
-
-@mixin breakpoint($point) {
-  @if $point == large {
-    @media (min-width: $large-width) {
-      @content;
-    }
-  } @else if $point == medium {
-    @media (min-width: $medium-width) {
-      @content;
-    }
-  } @else if $point == small {
-    @media (min-width: $small-width) {
-      @content;
-    }
-  } @else if $point == pocket {
-    @media (min-width: $pocket-width) {
-      @content;
-    }
-  } @else {
-    @media (min-width: $point) {
-      @content;
-    }
-  }
-}
-
 @mixin container {
   @include center($max-width);
   margin: 0 auto;

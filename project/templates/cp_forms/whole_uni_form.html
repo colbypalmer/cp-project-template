@@ -1,0 +1,17 @@
+{% if form_tag %}<form {{ flat_attrs|safe }} method="{{ form_method }}" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>{% endif %}
+    {% if form_method|lower == 'post' and not disable_csrf %}
+        {% csrf_token %}
+    {% endif %}
+
+    {% include "cp_forms/display_form.html" %}
+
+    {% if inputs %}
+    <footer class="form--right">
+        <ul>
+            {% for input in inputs %}
+                <li class="form__li--input">{% include "cp_forms/layout/baseinput.html" %}</li>
+            {% endfor %}
+        </ul>
+    </footer>
+    {% endif %}
+{% if form_tag %}</form>{% endif %}

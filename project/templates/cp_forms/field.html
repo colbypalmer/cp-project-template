@@ -1,0 +1,42 @@
+{% load crispy_forms_field %}
+
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+    <li id="form__li_{{ field.auto_id }}" class="form__li{% if wrapper_class %} {{ wrapper_class }}{% endif %}{% if field.errors and form_show_errors %} form__li--error{% endif %}{% if field|is_checkbox %} form__li--checkbox{% endif %}{% if field.css_classes %} {{ field.css_classes }}{% endif %}">
+        {% if field.label %}
+            <label for="{{ field.id_for_label }}" {% if field.field.required %}class="label--required"{% endif %}>
+                {% if field|is_checkbox %}
+                    {% crispy_field field %}
+                {% endif %}
+                {{ field.label|safe }}{% if field.field.required %}<span class="label__asterisk">*</span>{% endif %}
+                {% if field.help_text %}
+                    <span id="help_{{ field.auto_id }}" class="form__hover-help" rel="tooltip"
+                          title="{{ field.help_text|safe }}"></span>
+                {% endif %}
+            </label>
+        {% endif %}
+
+        {% if not field|is_checkbox %}
+            {% crispy_field field %}
+        {% endif %}
+
+        {% if form_show_errors and field.errors %}
+            <div class="error-wrapper">
+                <ul class="form__ul--errorlist">
+                    {% for error in field.errors %}
+                    <li id="error_{{ forloop.counter }}_{{ field.auto_id }}" class="form__li--errorlist">
+                        {{ error }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div class="error-wrapper"></div>
+
+{#        {% if field.help_text %}#}
+{#            <p id="hint_{{ field.auto_id }}" class="form__hint">{{ field.help_text|safe }}</p>#}
+{#        {% endif %}#}
+    </li>
+{% endif %}

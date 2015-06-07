@@ -1,4 +1,5 @@
 @import '../bower/normalize-css/normalize.css';
 @import '../bower/bourbon/app/assets/stylesheets/bourbon';
-@import 'bitters/base';
 @import 'jeet/index';
+@import 'bitters/cp-breakpoints';
+@import 'bitters/base';

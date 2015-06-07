@@ -29,7 +29,6 @@ label {
 select[multiple=multiple] {
   background-color: $base-background-color;
   border: $base-border;
-  border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
   display: block;
@@ -57,6 +56,10 @@ select[multiple=multiple] {
     &:hover {
       border: $base-border;
     }
+  }
+
+  &.form__input--error {
+    border-color: $red;
   }
 }
 
@@ -107,22 +110,345 @@ input:-moz-placeholder {
   clear: both !important;
 }
 
-.errorlist li {
-  background: #FFD6D6;
-  background: -webkit-gradient(linear, left center, right center, color-stop(0.00, #FFD6D6), color-stop(0.80, #fff));
-  background: -moz-linear-gradient(left, #FFD6D6 0.00%, #fff 80.00%);
-  color: #aa0000;
-  border-left: 4px solid #aa0000;
-  font-style: italic;
-  padding: 0 8px !important;
-  margin: 0 0 -6px 8px !important;
-  width: 75% !important;
-  display: block;
-  white-space: none;
-  clear: left !important;
-}
-
-li.form_error_li input, li.form_error_li textarea {
+li.form__li--error input, li.form__li--error textarea {
   background: #FFD6D6;
   border: 1px solid #c00 !important;
 }
+
+.form--cp {
+
+  margin: 1em 1em 0;
+  display: block;
+
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  input[type=text], input[type=password], input[type=email], input[type=number] {
+    margin-bottom: 6px;
+  }
+
+  button[type=submit], input[type=submit] {
+    margin: 0.5em auto 1em;
+    float: left;
+    display: block;
+    width: 150px;
+    height: 40px;
+    padding: 0;
+    text-transform: capitalize;
+
+    //&:focus, &:hover, &:active {
+    //  background-color: #ff446c;
+    //}
+
+    &.disabled, &:disabled {
+      color: #bb0e33;
+    }
+
+    &.btn-text {
+      color: $blue;
+      display: inline;
+      float: none;
+      background-color: transparent;
+      width: auto;
+      height: auto;
+      margin: 0;
+      text-transform: none;
+    }
+  }
+
+  label {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #555;
+    position: relative;
+    line-height: 1.1;
+  }
+
+  .label--required {
+    color: #555;
+
+    &:after {
+      content: "required";
+      font-size: 0.8em;
+      color: #bbb;
+      position: relative;
+      top: 2px;
+      padding-left: 5px;
+      float: right;
+    }
+
+    @include breakpoint(medium){
+
+      &:after {
+        //float: none;
+        margin-right: 5px;
+        top: 1px;
+      }
+    }
+  }
+
+  .select, .chosen-container {
+
+    min-width: 0;
+    width: 100%;
+
+    .trigger {
+      width: 100%;
+      padding: 11px 20px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+      border: 1px solid #d8d8d8;
+      border-radius: 3px;
+
+      &:hover {
+        border-color: $form-border-color-hover;
+      }
+
+      &:after {
+        top: 19px;
+      }
+    }
+
+    ul.options {
+
+      &.open {
+        top: 48px;
+        width: 100%;
+        padding-left: 0;
+      }
+
+      li {
+
+        padding-left: 1.5em;
+
+        &.selected {
+          background: $light-gray;
+        }
+
+        &:hover {
+          background: $light-gray;
+          color: #222;
+        }
+      }
+    }
+    .select:focus + .trigger {
+      border-color: $form-border-color-focus;
+      box-shadow: $form-box-shadow-focus;
+      outline: none;
+    }
+
+  }
+  &.form--wide {
+    input[type=text] {
+      float: none;
+    }
+  }
+}
+
+.label__asterisk {
+  display: none;
+}
+
+.form__ul {
+  padding: 0;
+}
+
+.form__li {
+  position: relative;
+  margin-bottom: 2em;
+
+  @include breakpoint(medium){
+    margin-bottom: 2.5em;
+
+    &:last-child {
+      margin-bottom: 2em;
+    }
+  }
+
+  &.form__li--error {
+
+    input {
+      border-color: $red;
+    }
+  }
+}
+
+.form--right {
+  margin: 0;
+  clear: both;
+  display: block;
+
+  @include breakpoint(medium) {
+    float: right;
+    width: 84%;
+  }
+  @include breakpoint(large) {
+    float: right;
+    width: 64.5%;
+    padding-left: 0;
+  }
+}
+
+.form--wide {
+
+  @include breakpoint(medium) {
+    width: 65%;
+    margin: 1em auto;
+  }
+
+  label {
+    @include breakpoint(medium) {
+      margin-top: 0.6em;
+      width: 35%;
+      float: left;
+    }
+
+    @include breakpoint(large) {
+      width: 30%;
+    }
+  }
+
+  .form--right {
+    @include breakpoint(medium) {
+      float: right;
+      width: 65%;
+      padding-left: 35%;
+    }
+    @include breakpoint(large) {
+      float: right;
+      width: 70%;
+      padding-left: 30%;
+    }
+  }
+
+  input[type=text], input[type=password], input[type=email], input[type=number], .select, textarea, .chosen-container {
+    margin-bottom: 6px;
+    @include breakpoint(medium) {
+      width: 65%;
+      text-align: left;
+    }
+
+    @include breakpoint(large) {
+      width: 70%;
+    }
+  }
+
+  .select input {
+    float: none;
+  }
+
+  .form__li--select, .select, .chosen-container {
+    @include breakpoint(medium) {
+      width: 70%;
+    }
+  }
+
+  .form__li--checkbox {
+  padding-bottom: 0;
+
+    @include breakpoint(medium) {
+      padding-left: 35%;
+      padding-bottom: 1.5em;
+    }
+
+    @include breakpoint(large) {
+      padding-left: 30%;
+    }
+  }
+
+}
+
+.form--link {
+
+  margin-top: 5.5em;
+
+  @include breakpoint(pocket) {
+    margin-top: 1em;
+    float: right;
+  }
+
+  @include breakpoint(medium) {
+    float: none;
+    margin-top: -2em;
+    display: inline;
+
+    .form--right {
+      width: 35%;
+      margin-top: -3em;
+      padding-left: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+
+    .form--right {
+      width: 30%;
+    }
+  }
+}
+
+// validation error styles
+
+.form--error_title {
+  color: $red;
+  border-bottom: 2px solid $red;
+  margin-bottom: 1rem;
+
+  li {
+    position: relative;
+    padding: 0 4px 0 1em;
+
+    &:before {
+      content: "\2715";
+      position: absolute;
+      display: block;
+      width: 10px;
+      // height: 10px;
+      top: 0;
+      left: -15px;
+      padding-left: 12px;
+      font-weight: bold;
+      font-size: 10px;
+    }
+  }
+}
+
+.form__ul--errorlist {
+  margin: -4px 0 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.form__li--errorlist {
+  margin: 0;
+  padding: 0;
+  color: $red;
+  line-height: 0.9;
+  text-align: right;
+
+  &:before {
+    content: "\2715";
+    position: relative;
+    top: -2px;
+    left: -5px;
+    display: inline-block;
+    width: 10px;
+    font-weight: bold;
+    font-size: 10px;
+  }
+}
+
+.form__input--error {
+  border-color: $red;
+
+  &:focus, &:hover, &:active {
+    border-color: $red;
+  }
+}
+
+
