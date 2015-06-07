@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 
     watch: {
       css: {
-        files: ['<%= pkg.name %>/<%= pkg.name %>/static/style/**/*.scss', '<%= pkg.name %>/<%= pkg.name %>/static/bower/**/*.scss'],
+        files: ['<%= pkg.name %>/<%= pkg.name %>/static/style/**/*.scss', 'bower/**/*.scss'],
         tasks: ['sass:colbystyle']
       },
       script: {
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
           banner: '/*! DEVELOPMENT VERSION */ \n'
         },
         src: [
-          '<%= pkg.name %>/<%= pkg.name %>/static/bower/jquery/dist/jquery.js',
+          'bower/jquery/dist/jquery.js',
           '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js'
         ],
         dest: '<%= pkg.name %>/<%= pkg.name %>/static/script/site-compiled.js'
@@ -63,8 +63,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js'],
-          '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/modernizr.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/bower/modernizr/modernizr.js'],
-          '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/bower/html5shiv/dist/html5shiv.js']
+          '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/modernizr.min.js': ['bower/modernizr/modernizr.js'],
+          '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['bower/html5shiv/dist/html5shiv.js']
         }
       }
     },
@@ -91,9 +91,22 @@ module.exports = function (grunt) {
     // Copy files
     copy: {
       main: {
-        src: '<%= pkg.name %>/<%= pkg.name %>/static/bower/jquery/dist/jquery.min.map',
-        dest: '<%= pkg.name %>/<%= pkg.name %>/static/script/jquery.min.map'
-
+        files: [
+          {
+            src: 'bower/jquery/dist/jquery.min.map',
+            dest: '<%= pkg.name %>/<%= pkg.name %>/static/script/jquery.min.map'
+          },
+          {
+            expand: true,
+            src: 'bower/bourbon/**',
+            dest: '<%= pkg.name %>/<%= pkg.name %>/static/style/'
+          },
+          {
+            expand: true,
+            src: 'bower/normalize-css/**',
+            dest: '<%= pkg.name %>/<%= pkg.name %>/static/style/'
+          }
+        ]
       }
     }
 
