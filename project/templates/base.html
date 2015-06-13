@@ -52,6 +52,16 @@
     </header>
 
     <main class="content--main" role="main">
+      {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+        <li{% if message.tags %} class="flash--{{ message.tags }}"{% endif %}>
+          {{ message }}
+          <span class="flash__btn--close">&#215;</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
       {% block site_main %}{% endblock %}
     </main>
   </div>

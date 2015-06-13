@@ -189,6 +189,49 @@ body {
   }
 }
 
+/* -------------    NOTIFICATIONS     -----------------*/
+
+.flashes {
+  li {
+    margin-left: 0.5em;
+    margin-bottom: 0.75em;
+    padding: 0.75em 1.25em 0.75em 1em;
+    position: relative;
+    box-shadow: 0 1px 1px transparentize(black, 0.8);
+  }
+}
+
+.flash__btn--close {
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+  font-size: 1.75em;
+  font-weight: normal;
+  color: $medium-gray;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
+.flash--error {
+  @include flash($error-color);
+}
+
+.flash--notice {
+  @include flash($notice-color);
+}
+
+.flash--success {
+  @include flash($success-color);
+}
+
+
+/* -------------    CUSTOM     -----------------*/
+
+// Put custom SCSS here.
+
 
 /* -------------    UTILITY     -----------------*/
 

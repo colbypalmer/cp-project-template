@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: SimploCapsDEMO-Regular, $helvetica;
+$base-font-family: $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -44,5 +44,16 @@ $base-background-color: #fff;
 $secondary-background-color: lighten($base-border-color, 10%);
 
 // Forms
+$form-border-color: $base-border-color !default;
+$form-border-color-hover: darken($base-border-color, 10) !default;
+$form-border-color-focus: $action-color !default;
+$form-border-radius: $base-border-radius !default;
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+$form-font-size: $base-font-size !default;
+$form-font-family: $base-font-family !default;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;

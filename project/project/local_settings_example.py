@@ -24,4 +24,7 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = 'My Site Admin <me@myproject.com>'
 
+# Because message cookies and BrowserSync don't play nicely
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 GOOGLE_ACCOUNT_CODE = "UA-XXXXXXX-XX"

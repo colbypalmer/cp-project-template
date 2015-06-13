@@ -1,6 +1,6 @@
 {
   "name": "my_special_project",
-  "version": "4.0.1",
+  "version": "0.0.1",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,5 +15,7 @@
     "modernizr": "latest",
     "bourbon": "latest",
     "normalize-css": "latest"
+    "parsleyjs": "~2.0.7",
+    "chosen": "~1.4.2"
   }
 }
