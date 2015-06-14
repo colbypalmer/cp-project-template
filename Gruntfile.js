@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: ['<%= pkg.name %>/<%= pkg.name %>/static/style/**/*.scss', 'bower/**/*.scss'],
-        tasks: ['sass:colbystyle']
+        tasks: ['sass:compilestyle']
       },
       script: {
         files: ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js'],
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 
     // SCSS Compile
     sass: {
-      colbystyle: {
+      compilestyle: {
         files: {
           '<%= pkg.name %>/<%= pkg.name %>/static/style/site.css': '<%= pkg.name %>/<%= pkg.name %>/static/style/site.scss'
         },
@@ -48,6 +48,9 @@ module.exports = function (grunt) {
         },
         src: [
           'bower/jquery/dist/jquery.js',
+          'bower/parsleyjs/dist/parsley.min.js',
+          'bower/chosen/chosen.jquery.min.js',
+          'bower/magnific-popup/dist/jquery.magnific-popup.min.js',
           '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js'
         ],
         dest: '<%= pkg.name %>/<%= pkg.name %>/static/script/site-compiled.js'
@@ -104,6 +107,10 @@ module.exports = function (grunt) {
           {
             expand: true,
             src: 'bower/normalize-css/**',
+            dest: '<%= pkg.name %>/<%= pkg.name %>/static/style/'
+          },
+          {
+            src: 'bower/magnific-popup/dist/magnific-popup.css',
             dest: '<%= pkg.name %>/<%= pkg.name %>/static/style/'
           }
         ]

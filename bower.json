@@ -14,8 +14,9 @@
     "html5shiv": "latest",
     "modernizr": "latest",
     "bourbon": "latest",
-    "normalize-css": "latest"
+    "normalize-css": "latest",
     "parsleyjs": "~2.0.7",
-    "chosen": "~1.4.2"
+    "chosen": "~1.4.2",
+    "magnific-popup": "latest"
   }
 }

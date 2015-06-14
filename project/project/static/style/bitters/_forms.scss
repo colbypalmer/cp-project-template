@@ -38,6 +38,7 @@ select[multiple=multiple] {
   padding: $base-spacing / 3;
   transition: border-color;
   width: 100%;
+  -webkit-appearance: none;
 
   &:hover {
     border-color: darken($base-border-color, 10%);
@@ -86,6 +87,10 @@ select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
+
+  @include breakpoint(medium) {
+    -webkit-appearance: none;
+  }
 }
 
 /* -------------    CUSTOMIZED BY COLBY     -----------------*/
