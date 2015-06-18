@@ -37,6 +37,7 @@ INTERNAL_IPS = [
 ]
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +46,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
+    'crispy_forms',
+    'parsley',
     'project',
 )
 if DEBUG:
@@ -95,6 +98,13 @@ USE_L10N = True
 USE_TZ = True
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
+GRAPPELLI_ADMIN_TITLE = 'Vainite Administration'
+
+CRISPY_TEMPLATE_PACK = 'cp_forms'
+CRISPY_ALLOWED_TEMPLATE_PACKS = ('cp_forms', 'uni_form')
+
+CONTACT_FORM_DEPARTMENTS = True
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

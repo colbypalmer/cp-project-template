@@ -9,8 +9,11 @@ This basic project template includes:
 5. Bourbon and Bitters
 6. Jeet grid system
 7. Grunt and Bower setup
+8. Amazing responsive crispy forms with Parsley validation
+9. "Chosen" UI widget for select elements
+10. Magnific popup for responsive modals
 
-Version: 0.1.2
+Version: 0.1.3
 
 Quick start
 -----------
