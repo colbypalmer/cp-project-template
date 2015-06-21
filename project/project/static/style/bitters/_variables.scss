@@ -30,10 +30,15 @@ $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 $dark-purple: #4D2F5A;
 
-// Font Colors
-$base-font-color: $dark-gray;
-$action-color: $dark-purple;
+//  Font Colors
+$base-font-color: #222;
+$base-accent-color: $blue;
+$action-color: $blue;
 $action-color-hover: lighten($action-color, 15%);
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: lighten($base-accent-color, 15);
 
 // Border
 $base-border-color: $light-gray;
