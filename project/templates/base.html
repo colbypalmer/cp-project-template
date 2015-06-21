@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <!--[if lt IE 7]>
 <html class="no-js ie6 ie" lang="en"> <![endif]-->
@@ -8,11 +9,15 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
 <head prefix="{% block head_prefix %}og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#{% endblock %}">
+  <title>{% block page_title %}Project Title{% endblock %}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% block page_title %}Project Title{% endblock %}</title>
-  <meta name="description" content="{% block meta_description %}{% endblock %}">
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="7 days">
+  <meta name="robots" content="index, follow">
   <meta name="author" content="Colby Palmer">
+  <meta name="copyright" content="Colby Palmer, 2015">
+  <meta name="description" content="{% block meta_description %}{% endblock %}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   {% block og_tags %}
