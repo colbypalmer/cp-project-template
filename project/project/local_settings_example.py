@@ -9,12 +9,12 @@ SECRET_KEY = '^lkajsdlfkjaoif09ijoi23092309i02[93ip2j3[r29u3[0923jorij'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db_name_here',
         'USER': 'db_user_here',
         'PASSWORD': 'db_password_here',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '5432',
     }
 }
 
