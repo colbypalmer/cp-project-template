@@ -63,11 +63,16 @@ module.exports = function (grunt) {
         banner: '/*! Compiled Site Javascript v<%= pkg.version %> on ' +
             '<%= grunt.template.today("yyyy-mm-dd") %> */ \n'
       },
-      dist: {
+      dev: {
         files: {
           '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js'],
           '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/modernizr.min.js': ['bower/modernizr/modernizr.js'],
           '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['bower/html5shiv/dist/html5shiv.js']
+        }
+      },
+      all: {
+        files: {
+          '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js'],
         }
       }
     },
@@ -122,7 +127,8 @@ module.exports = function (grunt) {
   // Tasks
   grunt.registerTask('default', ['browserSync', 'watch']);
   grunt.registerTask('buildcss', ['sass']);
-  grunt.registerTask('buildjs', ['jshint', 'uglify', 'concat']);
+  grunt.registerTask('buildjs', ['jshint', 'uglify:dev', 'concat']);
+  grunt.registerTask('buildall', ['copy', 'sass', 'jshint', 'uglify:all', 'concat']);
   grunt.registerTask('guide', ['sass', 'styleguide']);
 
 };
