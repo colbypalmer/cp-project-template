@@ -14,11 +14,3 @@ urlpatterns = patterns('',
                        url(r'^robots.txt$', DirectTemplateView.as_view(template_name='robots.txt')),
                        url(r'^humans.txt$', DirectTemplateView.as_view(template_name='humans.txt')),
                        )
-
-if settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': '/Users/colbypalmer/Projects/project/project/static/'}),
-        (r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': '/Users/colbypalmer/Projects/project/project/media/'}),
-    )

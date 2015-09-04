@@ -35,11 +35,16 @@ Quick start
 
 8. Install npm modules with `npm install`.
 
-9. cd to project/project/static and install bower modules with `bower install`.
+9. Install bower modules with `bower install`.
 
 10. Run Grunt by running `grunt` from the main project folder (same directory as Gruntfile.js).
 
-11. In another shell, cd to your project directory/< YOUR PROJECT NAME >/ and enter `python maanage.py runserver`.
+11. In another shell, cd to your project directory/< YOUR PROJECT NAME >/ and enter: 
+```
+python manage.py migrate
+python manage.py runserver
+
+```
 
 
 Settings

@@ -100,7 +100,7 @@ USE_TZ = True
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
-GRAPPELLI_ADMIN_TITLE = 'Vainite Administration'
+GRAPPELLI_ADMIN_TITLE = 'Project Administration'
 
 CRISPY_TEMPLATE_PACK = 'cp_forms'
 CRISPY_ALLOWED_TEMPLATE_PACKS = ('cp_forms', 'uni_form')
