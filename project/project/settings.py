@@ -11,8 +11,6 @@ try:
 except ImportError:
     pass
 
-TEMPLATE_DEBUG = DEBUG
-
 ALLOWED_HOSTS = []
 
 MANAGERS = ADMINS
@@ -73,6 +71,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, "templates"), ],
         'APP_DIRS': True,
+        'DEBUG': DEBUG,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
