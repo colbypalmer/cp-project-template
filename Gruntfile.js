@@ -66,7 +66,6 @@ module.exports = function (grunt) {
       dev: {
         files: {
           '<%= pkg.name %>/<%= pkg.name %>/static/script/site.min.js': ['<%= pkg.name %>/<%= pkg.name %>/static/script/site.js'],
-          '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/modernizr.min.js': ['bower/modernizr/modernizr.js'],
           '<%= pkg.name %>/<%= pkg.name %>/static/script/libs/html5shiv.min.js': ['bower/html5shiv/dist/html5shiv.js']
         }
       },

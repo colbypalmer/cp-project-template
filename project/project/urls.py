@@ -7,10 +7,11 @@ from utils.views import DirectTemplateView
 
 handler500 = 'views.server_error'
 
-urlpatterns = patterns('',
-                       url(r'^$', DirectTemplateView.as_view(template_name='homepage.html'), name='home'),
-                       url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-                       url(r'^admin/', include(admin.site.urls)),
-                       url(r'^robots.txt$', DirectTemplateView.as_view(template_name='robots.txt')),
-                       url(r'^humans.txt$', DirectTemplateView.as_view(template_name='humans.txt')),
-                       )
+urlpatterns = [
+    url(r'^$', DirectTemplateView.as_view(template_name='homepage.html'), name='home'),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^robots.txt$', DirectTemplateView.as_view(template_name='robots.txt')),
+    url(r'^humans.txt$', DirectTemplateView.as_view(template_name='humans.txt')),
+]
+

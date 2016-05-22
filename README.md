@@ -39,7 +39,9 @@ Quick start
 
 10. Run Grunt by running `grunt` from the main project folder (same directory as Gruntfile.js).
 
-11. In another shell, cd to your project directory/< YOUR PROJECT NAME >/ and enter: 
+11. Build all the initial static media by then running `grunt buildall`.
+
+12. In another shell, cd to your project directory/< YOUR PROJECT NAME >/ and enter: 
 ```
 python manage.py migrate
 python manage.py runserver
