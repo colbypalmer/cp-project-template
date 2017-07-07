@@ -4,14 +4,13 @@ This basic project template includes:
 
 1. Django project
 2. South
-3. DirectTemplateView utility
-4. django-thumbs utility
-5. Bourbon and Bitters
-6. Jeet grid system
-7. Grunt and Bower setup
-8. Amazing responsive crispy forms with Parsley validation
-9. "Chosen" UI widget for select elements
-10. Magnific popup for responsive modals
+3. django-thumbs utility
+4. Bourbon and Bitters
+5. Jeet grid system
+6. Grunt and Bower setup
+7. Amazing responsive crispy forms with Parsley validation
+8. "Chosen" UI widget for select elements
+9. Magnific popup for responsive modals
 
 Version: 0.1.3
 
