@@ -16,11 +16,11 @@
   "private": true,
   "devDependencies": {
     "grunt": "^1.0.0",
-    "grunt-browser-sync": "2.9.8",
+    "grunt-browser-sync": "2.2.0",
     "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-jshint": "0.11.3",
+    "grunt-contrib-jshint": "1.1.0",
     "grunt-contrib-sass": "1.0.0",
-    "grunt-contrib-uglify": "1.0.1",
+    "grunt-contrib-uglify": "3.0.1",
     "grunt-contrib-watch": "1.0.0",
     "matchdep": "1.0.1"
   }
