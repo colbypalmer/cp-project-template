@@ -32,7 +32,7 @@ Quick start
 
 8. Install npm modules with `npm install`.
 
-9. Install bower modules with `bower install`.
+9. Install javascript modules with `yarn install`.
 
 10. Run Grunt by running `grunt` from the main project folder (same directory as Gruntfile.js).
 

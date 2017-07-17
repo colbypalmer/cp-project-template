@@ -14,6 +14,15 @@
     "url": "https://github.com/colbypalmer/project.git"
   },
   "private": true,
+  "dependencies": {
+    "jquery": "latest",
+    "html5shiv": "latest",
+    "bourbon": "latest",
+    "normalize-css": "latest",
+    "parsleyjs": "~2.0.7",
+    "chosen": "~1.4.2",
+    "magnific-popup": "latest"
+  },
   "devDependencies": {
     "grunt": "^1.0.0",
     "grunt-browser-sync": "2.2.0",
@@ -23,5 +32,8 @@
     "grunt-contrib-uglify": "3.0.1",
     "grunt-contrib-watch": "1.0.0",
     "matchdep": "1.0.1"
-  }
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": {}
 }
