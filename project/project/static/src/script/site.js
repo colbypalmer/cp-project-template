@@ -9,6 +9,8 @@ SiteActions.parsley_base_options = {
   errorTemplate: '<li class="form__li--errorlist"></li>'
 };
 
+require("../style/site.scss");
+
 $(document).ready(function(){
 
 

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load render_bundle from webpack_loader %}
 <!doctype html>
 <!--[if lt IE 7]>
 <html class="no-js ie6 ie" lang="en"> <![endif]-->
@@ -33,10 +34,7 @@
 
   <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
   <link rel="icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
-  <link href="{% static "style/site.css" %}" rel="stylesheet"/>
-  <!--[if lt IE 9]>
-    <script src="{% static "script/libs/html5shiv.min.js" %}"></script>
-  <![endif]-->
+  {% render_bundle 'main' 'css' %}
   {% block extra_stylesheets %}{% endblock %}
   {% block extra_head %}{% endblock %}
 </head>
@@ -50,7 +48,6 @@
       <h1 class="header__heading">
         <a href="/" class="header__a">
           <span class="header__title">Project Title Goes Here</span>
-          <span class="header__subtitle">Page subtitle goes here</span>
         </a>
       </h1>
     </header>
@@ -72,12 +69,12 @@
 
   <footer class="footer--main">
     <div class="footer__container">
-      <p class="footer__copyright">&copy; 2016 Zaphod Beeblebrox. <span>All rights reserved.</span></p>
+      <p class="footer__copyright">&copy; 2017 My Project. <span>All rights reserved.</span></p>
     </div>
   </footer>
 
 {% block extra_body %}{% endblock %}
-<script src="{% static "script/site-compiled.js" %}"></script>
+{% render_bundle 'main' 'js' %}
 {% block extra_scripts %}{% endblock %}
 
 {% if GOOGLE_ACCOUNT_CODE and not debug %}
