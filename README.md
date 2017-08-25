@@ -5,7 +5,7 @@ This basic project template includes:
 1. Django project
 2. Bourbon and Bitters
 3. Jeet grid system
-4. Grunt and Bower setup
+4. Webpack and Yarn setup
 5. Responsive crispy forms with Parsley validation
 6. "Chosen" UI widget for select elements
 7. Magnific popup for responsive modals
@@ -28,17 +28,15 @@ Quick start
 
 6. If necessary, install Grunt with `npm install -g grunt-cli`.
 
-7. In your Terminal, navigate to the project folder and type `npm install grunt --save-dev`
+7. In your Terminal, navigate to the project folder and type `npm install webpack --save-dev`
 
 8. Install npm modules with `npm install`.
 
 9. Install javascript modules with `yarn install`.
 
-10. Run Grunt by running `grunt` from the main project folder (same directory as Gruntfile.js).
+10. Run Webpack by running `webpack` from the main project folder (same directory as package.json).
 
-11. Build all the initial static media by then running `grunt buildall`.
-
-12. In another shell, cd to your project directory/< YOUR PROJECT NAME >/ and enter: 
+11. In another shell, cd to your project directory/< YOUR PROJECT NAME >/ and enter: 
 ```
 python manage.py migrate
 python manage.py runserver
